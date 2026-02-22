@@ -7,6 +7,7 @@ import { EditorPane, CodeEditor } from './editor-pane'
 import { Button } from './ui/button'
 import { AnimatedThemeToggler } from './ui/animated-theme-toggler'
 import { htmlToMarkdown } from '@/lib/html-to-markdown'
+import { siteConfig } from '@/lib/site-config'
 import { toast } from 'sonner'
 import { cn } from '@/lib/utils'
 
@@ -124,6 +125,18 @@ export default function HtmlToMarkdownConverter() {
           </EditorPane>
         </div>
       </main>
+
+      <footer className="shrink-0 flex items-center justify-center gap-2 py-3 px-4 border-t border-border bg-muted/20 text-muted-foreground text-sm">
+        <span>Built by</span>
+        <a
+          href={siteConfig.author.portfolioUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-medium text-foreground hover:underline"
+        >
+          {siteConfig.author.name}
+        </a>
+      </footer>
     </div>
   )
 }
