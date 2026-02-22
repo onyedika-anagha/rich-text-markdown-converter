@@ -1,4 +1,9 @@
-import HtmlToMarkdownConverter from '@/components/html-to-markdown-converter'
+import dynamic from 'next/dynamic'
+
+const HtmlToMarkdownConverter = dynamic(
+  () => import('@/components/html-to-markdown-converter'),
+  { ssr: false }
+)
 
 export const metadata = {
   title: 'Rich Text to Markdown Converter',
