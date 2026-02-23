@@ -28,14 +28,14 @@ export const toolbarOptions = [
       header: 2,
     },
   ], // custom button values
-  // [
-  //   {
-  //     list: "ordered",
-  //   },
-  //   {
-  //     list: "bullet",
-  //   },
-  // ],
+  [
+    {
+      list: "ordered",
+    },
+    {
+      list: "bullet",
+    },
+  ],
   // [
   //   {
   //     script: "sub",
